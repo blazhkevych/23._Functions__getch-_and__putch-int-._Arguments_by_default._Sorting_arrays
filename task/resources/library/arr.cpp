@@ -128,10 +128,21 @@ void SortHalfDescHalfAscend(int arr[], int size)
 	}
 }
 
-// Функция сортирует элементы между двумя индексами.
-void SortBetweenTwoIndices(int arr[], int size)
+// Функция сортирует элементы, в одномерном массиве, между двумя индексами, по возрастанию.
+void SortBetweenTwoIndices(int arr[], int size, int firstInd, int lastInd)
 {
-	 // ДОПИСАТЬ РЕАЛИЗАЦИЮ ФУНКЦИИ !!!
+	for (int i = firstInd + 1; i < lastInd; i++)
+	{
+		for (int j = lastInd - 1; j > i; j--)
+		{
+			if (arr[j - 1] < arr[j])
+			{
+				int x = arr[j - 1];
+				arr[j - 1] = arr[j];
+				arr[j] = x;
+			}
+		}
+	}
 }
 
 // Функция меняющая порядок следования элементов передаваемого ей одномерного массива на противоположный.
@@ -146,7 +157,7 @@ void ReversesElemArray(int arr[], int size)
 }
 
 // Функция находит позицию крайнего отрицательного элемента (самого левого отрицательного элемента).
-int LeftmostNegativeElement(int arr[], int size)
+int LeftmostNegElem(int arr[], int size)
 {
 	int position{ -1 };
 	for (int i = 0; i < size; i++)
@@ -160,7 +171,7 @@ int LeftmostNegativeElement(int arr[], int size)
 }
 
 // Функция находит позицию крайнего отрицательного элемента (самого правого отрицательного элемента).
-int RightmostNegativeElement(int arr[], int size)
+int RightmostNegElem(int arr[], int size)
 {
 	int position{ -1 };
 	for (int i = size - 1; i >= 0; i--)

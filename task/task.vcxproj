@@ -139,6 +139,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="resources\library\algorithms.cpp" />
     <ClCompile Include="resources\library\arr.cpp" />
     <ClCompile Include="resources\library\asciilib.cpp" />
     <ClCompile Include="resources\library\datetime.cpp" />
@@ -147,6 +148,7 @@
     <ClCompile Include="task.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="resources\library\algorithms.h" />
     <ClInclude Include="resources\library\arr.h" />
     <ClInclude Include="resources\library\asciilib.h" />
     <ClInclude Include="resources\library\datetime.h" />
